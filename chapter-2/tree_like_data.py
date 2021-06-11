@@ -19,7 +19,7 @@ Primates
             Galago moholi
 """
 
-taxonomy = { 
+tax_dict = { 
     "Pan troglodytes": "Hominoidea", "Pongo abelii": "Hominoidea", 
     "Hominoidea": "Simiiformes", "Simiiformes": "Haplorrhini", 
     "Tarsius tarsier": "Tarsiiformes", "Haplorrhini": "Primates",
@@ -34,10 +34,21 @@ def get_ancestors(taxon):
     result = []
 
     while taxon != "Primates":
-        ancestor = taxonomy.get(taxon)
-        result.append(ancestor)
-        taxon = ancestor
+        parent = tax_dict.get(taxon)
+
+        result.append(parent)
+        taxon = parent
 
     return result
 
+def get_ancestors_recursively(taxon):
+    if taxon == "Primates":
+        return []
+    else:
+        parent = tax_dict.get(taxon)
+        parent_ancestors = get_ancestors_recursively(parent)
+        return [parent] + parent_ancestors
+
 print(get_ancestors("Galago alleni"))
+print(get_ancestors_recursively("Galago alleni"))
+
