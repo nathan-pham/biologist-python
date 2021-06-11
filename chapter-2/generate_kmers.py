@@ -1,11 +1,15 @@
 from random import randint
 
-bases = ['A', 'T', 'G', 'C']
 
 def generate_kmers(length):
-    result = []
+    bases = ['A', 'T', 'G', 'C']
+    result = ['']
+
     for i in range(length):
-        result.append(bases[randint(0, len(bases) - 1)])
+        for j in range(len(result)):
+            for base in bases:
+                result[j] += base
+
     return result
 
 print(generate_kmers(3))
