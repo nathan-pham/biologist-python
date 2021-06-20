@@ -27,3 +27,4 @@ def get_lca(taxon_a, taxon_b):
         if taxon in ancestors_a:
             return taxon
 
+get_lca("")

@@ -1,6 +1,5 @@
 from random import randint
 
-
 def generate_kmers(length):
     bases = ['A', 'T', 'G', 'C']
     result = ['']
