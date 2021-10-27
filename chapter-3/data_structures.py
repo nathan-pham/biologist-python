@@ -63,3 +63,8 @@ for (metalA, listA) in gene_sets.items():
     for (metalB, listB) in gene_sets.items():
         if(listA.issubset(listB) and metalB != metalA):
             print(f"{ metalA } is a subset of { metalB }")
+
+
+
+
+# 
