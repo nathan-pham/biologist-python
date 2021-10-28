@@ -2,6 +2,7 @@
 ex_tuple = ('Nathan Pham', 'California', 16)
 
 
+# ============================================================ #
 
 
 # sets limit repetition, stores individual values
@@ -16,6 +17,7 @@ for acc in accessions:
 print(processed)
 
 
+# ============================================================ #
 
 
 # multidimensional list
@@ -37,6 +39,7 @@ column = [row[0] for row in alignments]
 print(column)
 
 
+# ============================================================ #
 
 
 # dict of sets
@@ -62,9 +65,45 @@ print([ metal for (metal, genes) in gene_sets.items() if 4 in genes ])
 for (metalA, listA) in gene_sets.items():
     for (metalB, listB) in gene_sets.items():
         if(listA.issubset(listB) and metalB != metalA):
-            print(f"{ metalA } is a subset of { metalB }")
+            print(f'{ metalA } is a subset of { metalB }')
 
 
+# ============================================================ #
 
 
-# 
+# dicts of tuples
+records = {
+    'ABC123' : ('actgctagt', 1),
+    'XYZ456' : ('ttaggttta', 1),
+    'HIJ789' : ('cgcgatcgt', 5)
+}
+
+# retrieve a record
+(sequence, code) = records.get('HIJ789')
+print(f'sequence: { sequence } code: { code }')
+
+
+# ============================================================ #
+
+
+# track frequency of kmers
+dna = 'aattggaattggaattg'
+count = {}
+k = 4
+
+for i in range(len(dna) - k + 1):
+    kmer = dna[i:i + k]
+    count[kmer] = count.get(kmer, 0) + 1
+
+print(count)
+
+# retrieve position at which a kmer occurs
+position = {}
+
+for i in range(len(dna) - k + 1):
+    kmer = dna[i:i + k]
+    array = position.get(kmer, [])
+    array.append(i)
+    position[kmer] = array
+
+print(position)
