@@ -1,4 +1,5 @@
-tree = ['dog', 
+tree = [
+    'dog', 
     ['raccoon','bear'], 
     [
         ['sea_lion','seal'],
