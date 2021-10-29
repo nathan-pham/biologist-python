@@ -16,4 +16,6 @@ Python and biologist applications
     * [Inheritance with Sequence Record Class](/chapter-4/SequenceRecord.py)
     * [Protein Record Class](/chapter-4/ProteinRecord.py)
     * [DNA Record Class](/chapter-4/DNARecord.py)
-    * [Calling Methods](/chapter-4/main.py)
+    * [Calling Methods](/chapter-4/object_oriented.py)
+
+* Chapter 5: Functional Python
