@@ -13,4 +13,7 @@ Python and biologist applications
     * [Complex Structures](/chapter-3/data_structures.py)
     
 * Chapter 4: Object Oriented Pythn
+    * [Inheritance with Sequence Record Class](/chapter-4/SequenceRecord.py)
+    * [Protein Record Class](/chapter-4/ProteinRecord.py)
     * [DNA Record Class](/chapter-4/DNARecord.py)
+    * [Calling Methods](/chapter-4/main.py)
