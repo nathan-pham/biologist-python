@@ -3,6 +3,8 @@ from SequenceRecord import SequenceRecord
 class DNARecord(SequenceRecord):
 
     def __init__(self, sequence, gene_name, species_name, genetic_code):
+        SequenceRecord.__init__(self, sequence, gene_name, species_name)
+
         self.sequence = sequence
         self.gene_name = gene_name
         self.species_name = species_name
