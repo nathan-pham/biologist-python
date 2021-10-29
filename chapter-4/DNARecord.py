@@ -23,25 +23,3 @@ class DNARecord(SequenceRecord):
             protein += gene_code.get(codon.upper(), "X")
 
         return protein
-
-class ProteinRecord(DNARecord):
-    def __init__(self, sequence="ACGTAGCTGACGATC", gene_name="ABC1", species_name="Drosophila melanogaster"):
-        self.sequence = sequence
-        self.gene_name = gene_name
-        self.species_name = species_name
-
-    @property
-    def hydrophobic(self):
-        amino_acids = ['A','I','L','M','F','W','Y','V']
-        total = 0
-
-        for a in amino_acids:
-            total += self.sequence.count(a.upper())
-
-        return (total / len(self.sequence)) * 100
-
-dna = DNARecord()
-print(f"complement: {dna.complement()}")
-print(f"protein: {dna.translate()}")
-print(f"{dna.get_AT():.2f}")
-print(dna)

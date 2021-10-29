@@ -12,3 +12,5 @@ Python and biologist applications
 * Chapter 3: Complex Data Structures
     * [Complex Structures](/chapter-3/data_structures.py)
     
+* Chapter 4: Object Oriented Pythn
+    * [DNA Record Class](/chapter-4/DNARecord.py)

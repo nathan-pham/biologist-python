@@ -8,6 +8,3 @@ class SequenceRecord:
     @property
     def fasta(self):
         return "> " + self.gene_name + "_" + self.species_name.replace(" ", "_") + "\n" + self.sequence
-
-    def __str__(self):
-        return self.fasta
