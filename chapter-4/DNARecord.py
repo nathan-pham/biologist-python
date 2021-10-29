@@ -1,7 +1,14 @@
 from SequenceRecord import SequenceRecord 
 
 class DNARecord(SequenceRecord):
-        
+
+    def __init__(self, sequence, gene_name, species_name, genetic_code):
+        self.sequence = sequence
+        self.gene_name = gene_name
+        self.species_name = species_name
+        self.genetic_code = genetic_code
+
+
     def complement(self):
         return (self.sequence.replace("A", "t")
                             .replace("T", "a")

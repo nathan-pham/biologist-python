@@ -1,6 +1,6 @@
 class SequenceRecord:
     
-    def __init__(self, sequence="ACGTAGCTGACGATC", gene_name="ABC1", species_name="Drosophila melanogaster"):
+    def __init__(self, sequence, gene_name, species_name):
         self.sequence = sequence
         self.gene_name = gene_name
         self.species_name = species_name
