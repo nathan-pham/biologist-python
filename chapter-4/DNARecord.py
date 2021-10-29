@@ -1,10 +1,6 @@
-class DNARecord:
-    
+from SequenceRecord import SequenceRecord 
 
-    def __init__(self, _sequence="ACGTAGCTGACGATC", _gene_name="ABC1", _species_name="Drosophila melanogaster"):
-        self.sequence = _sequence
-        self.gene_name = _gene_name
-        self.species_name = _species_name
+class DNARecord(SequenceRecord):
         
     def complement(self):
         return (self.sequence.replace("A", "t")
@@ -28,13 +24,21 @@ class DNARecord:
 
         return protein
 
-    def get_fasta(self):
-        return "> " + self.gene_name + "_" + self.species_name.replace(" ", "_") + "\n" + self.sequence
+class ProteinRecord(DNARecord):
+    def __init__(self, sequence="ACGTAGCTGACGATC", gene_name="ABC1", species_name="Drosophila melanogaster"):
+        self.sequence = sequence
+        self.gene_name = gene_name
+        self.species_name = species_name
 
-    def __str__(self):
-        return self.get_fasta()
+    @property
+    def hydrophobic(self):
+        amino_acids = ['A','I','L','M','F','W','Y','V']
+        total = 0
 
+        for a in amino_acids:
+            total += self.sequence.count(a.upper())
 
+        return (total / len(self.sequence)) * 100
 
 dna = DNARecord()
 print(f"complement: {dna.complement()}")
