@@ -89,10 +89,16 @@ print(f"multiplied numbers: {multiplied}")
 
 
 # writing higher order functions
-def get_kmers(dna, k):
+dna = "ATCGATCATCGGCATCGATCGGTATCAGTACGTAC"
+
+def get_kmers(dna, k, analyze=lambda v : v):
     kmers = []
 
     for i in range(len(dna) - k + 1):
-        kmers.append(dna[i:i + k])
+        kmers.append(analyze(dna[i:i + k]))
 
     return kmers
+
+
+kmers_at = get_kmers(dna, 4, lambda v : (v.count("A") + v.count("T")) / len(v))
+print(f"at scores: {kmers_at}")
