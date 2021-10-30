@@ -68,3 +68,31 @@ loci = [
 sorted_by_locus = sorted(loci, key=lambda v : v[0])
 sorted_by_base = sorted(sorted_by_locus, key=lambda v : v[1])
 print(f"sorted by locus -> base: {sorted_by_base}")
+
+
+# ============================================================ #
+
+
+# higher order function: reduce (deprecated)
+def reduce(arr, function):
+    result = arr[0]
+    for i in arr[1:]:
+        result = function(result, i)
+    return result
+
+numbers = [2, 6, 3, 8, 5, 4]
+multiplied = reduce(numbers, lambda acc, curr : acc * curr)
+print(f"multiplied numbers: {multiplied}")
+
+
+# ============================================================ #
+
+
+# writing higher order functions
+def get_kmers(dna, k):
+    kmers = []
+
+    for i in range(len(dna) - k + 1):
+        kmers.append(dna[i:i + k])
+
+    return kmers
