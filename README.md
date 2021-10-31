@@ -9,8 +9,7 @@ Python and biologist applications
         * [Child-to-parent Trees](/chapter-2/child_parent.py)
         * [Parent-to-child Trees](/chapter-2/parent_child.py)
 
-* Chapter 3: Complex Data Structures
-    * [Complex Structures](/chapter-3/data_structures.py)
+* [Chapter 3: Complex Data Structures]((/chapter-3/data_structures.py))
     
 * Chapter 4: Object Oriented Pythn
     * [Inheritance with Sequence Record Class](/chapter-4/SequenceRecord.py)
@@ -18,4 +17,6 @@ Python and biologist applications
     * [DNA Record Class](/chapter-4/DNARecord.py)
     * [Calling Methods](/chapter-4/object_oriented.py)
 
-* Chapter 5: Functional Python
+* [Chapter 5: Functional Python](/chapter-5/functional.py)
+
+* Chapter 6: Iterators, Comprehensions, and Generators
