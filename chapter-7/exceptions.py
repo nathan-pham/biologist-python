@@ -82,12 +82,15 @@ except ValueError as error:
 # ============================================================ #
 
 
-# raising exceptions
+# raising (custom) exceptions
 import re
+
+class DNAError(Exception):
+    pass
 
 def get_at(dna):
     if re.search(r'[^ATCG]', dna):
-        raise ValueError("invalid nucleotide")
+        raise DNAError("invalid nucleotide")
 
     return (dna.count("A") + dna.count("T")) / len(dna)
 
@@ -96,5 +99,5 @@ sequences = ['ACGTACGTGAC', 'ACTGCTNAACT', 'ATGGCGCTAGC']
 for sequence in sequences:
     try:
         print(f"AT content for {sequence} is {get_at(sequence)}")
-    except ValueError as error:
-        print(f"skipping invalid sequence: {sequence}")
+    except DNAError as error:
+        print(f"skipping invalid sequence: {sequence}; {error}")
