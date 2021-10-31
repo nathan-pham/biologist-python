@@ -24,3 +24,13 @@ print(f"unique DNA pairs: {dna_pairs}")
 
 
 # dictionary comprehensions
+dna_dict = {dna: len(dna) for dna in dna_list}
+print(f"DNA dict: {dna_dict}")
+
+
+# ============================================================ #
+
+
+# set  comprehensions
+even_integers = {x for x in range(50) if x % 2 == 0}
+print(f"even integers: {even_integers}")
