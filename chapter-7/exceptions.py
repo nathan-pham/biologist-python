@@ -26,6 +26,7 @@ except IOError as error:
 
 # using finally to guarantee a block of code is executed
 import os
+from typing import ValuesView
 temp_handle = open("temp.text", "w")
 temp_handle.write("some important text")
 temp_handle.close()
@@ -57,20 +58,43 @@ finally:
     # code in here will always be run
 """
 
+
 # ============================================================ #
 
-# def function_one:
-#  try:
-#  # do some processing...
-#  return 5
-#  except SomeException:
-#  print("warning: something went wrong")
-#  raise
- 
-# def function_two:
-#  my_number = function_one()
-#  return my_number + 2
-# try:
-#  print(function_two())
-# except SomeException:
-#  # handle the exception
+
+# exceptions bubble upwards, usually you want to raise an exception to notify programmer
+def function_one():
+    try:
+        return int("sdfsf") + 5
+    except ValueError:
+        raise ValueError("failed to parse string")
+
+def function_two():
+    number = function_one() 
+    return number + 2
+
+try:
+    print(function_two())
+except ValueError as error:
+    print(error)
+
+
+# ============================================================ #
+
+
+# raising exceptions
+import re
+
+def get_at(dna):
+    if re.search(r'[^ATCG]', dna):
+        raise ValueError("invalid nucleotide")
+
+    return (dna.count("A") + dna.count("T")) / len(dna)
+
+# gracefully skip invalid inputs
+sequences = ['ACGTACGTGAC', 'ACTGCTNAACT', 'ATGGCGCTAGC'] 
+for sequence in sequences:
+    try:
+        print(f"AT content for {sequence} is {get_at(sequence)}")
+    except ValueError as error:
+        print(f"skipping invalid sequence: {sequence}")
