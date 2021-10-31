@@ -31,3 +31,26 @@ def get_4mers(dna):
 
 for x in get_4mers('actggcgtgcatg'):
     print(x)
+
+
+# ============================================================ #
+
+
+# custom iterators depending on the situtation
+class DNAIterator:
+    sequence = 'atgccgcat' 
+
+    def bases(self):
+        return iter(self.sequence)
+
+    def codons(self):
+        return self.kmers(3)
+
+    def kmers(self, k):
+        for i in range(0, len(self.sequence) - k + 1):
+            yield self.sequence[i:i + k]
+
+sequence = DNAIterator()
+[print(f"base: {base}") for base in sequence.bases()]
+[print(f"codon: {codon}") for codon in sequence.codons()]
+[print(f"4mer: {kmer}") for kmer in sequence.kmers(4)]
