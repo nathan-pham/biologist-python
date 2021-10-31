@@ -1,5 +1,7 @@
+![project banner](https://project-banner.phamn23.repl.co/?title=Advanced%20Python%20with%20Biology&description=Python%20for%20biology%20applications&stack=python)
+
 # Biologist Python
-Python and biologist applications  
+Python for biology applications  
 
 ## Chapters
 * Chapter 2: Recursion and Trees
@@ -24,3 +26,5 @@ Python and biologist applications
     * [Iterators and Generators](/chapter-6/iterators.py)
 
 * Chapter 7: Exception Handling
+    * [Exception Handling](/chapter-7/exceptions.py)
+    * [Context Managers](/chapter-7/context.py)
