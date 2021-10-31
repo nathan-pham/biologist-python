@@ -20,3 +20,5 @@ Python and biologist applications
 * [Chapter 5: Functional Python](/chapter-5/functional.py)
 
 * Chapter 6: Iterators, Comprehensions, and Generators
+    * [Comprehensions](/chapter-6/comprehensions.py)
+    * [Iterators and Generators](/chapter-6/iterators.py)
