@@ -11,7 +11,7 @@ Python and biologist applications
 
 * [Chapter 3: Complex Data Structures]((/chapter-3/data_structures.py))
     
-* Chapter 4: Object Oriented Pythn
+* Chapter 4: Object Oriented Python
     * [Inheritance with Sequence Record Class](/chapter-4/SequenceRecord.py)
     * [Protein Record Class](/chapter-4/ProteinRecord.py)
     * [DNA Record Class](/chapter-4/DNARecord.py)
@@ -22,3 +22,5 @@ Python and biologist applications
 * Chapter 6: Iterators, Comprehensions, and Generators
     * [Comprehensions](/chapter-6/comprehensions.py)
     * [Iterators and Generators](/chapter-6/iterators.py)
+
+* Chapter 7: Exception Handling
