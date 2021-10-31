@@ -23,6 +23,7 @@ except IOError as error:
 
 # ============================================================ #
 
+
 # using finally to guarantee a block of code is executed
 import os
 temp_handle = open("temp.text", "w")
@@ -56,3 +57,20 @@ finally:
     # code in here will always be run
 """
 
+# ============================================================ #
+
+# def function_one:
+#  try:
+#  # do some processing...
+#  return 5
+#  except SomeException:
+#  print("warning: something went wrong")
+#  raise
+ 
+# def function_two:
+#  my_number = function_one()
+#  return my_number + 2
+# try:
+#  print(function_two())
+# except SomeException:
+#  # handle the exception
