@@ -1,7 +1,7 @@
-![project banner](https://project-banner.phamn23.repl.co/?title=Advanced%20Python%20with%20Biology&description=Python%20for%20biology%20applications&stack=python)
+![project banner](https://project-banner.phamn23.repl.co/?title=Advanced%20Python&description=Application%20of%20Python%20for%20biology&stack=python)
 
 # Biologist Python
-Python for biology applications  
+Application of Python for biology
 
 ## Chapters
 * Chapter 2: Recursion and Trees
